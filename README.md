@@ -9,3 +9,4 @@
 ![4](https://github.com/Jagadeeshach/test/assets/141582411/0d9c22c0-7524-4e11-ba79-ded6514dc337)
 
 
+Create a simple html page and load user images using a JSON of this structure [ { "image":"url"}]. Add 25 image object in JSON array and your test is evaluated based on how fast the images are loading and the coding practices. The better if the html looks like the given sample design
