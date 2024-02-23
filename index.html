@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        .main {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .main h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+
+        .main div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .img {
+            height: 200px;
+            width: 200px;
+            padding: 5px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .main h1 {
+                text-align: center;
+
+            }
+
+            .main div {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .img {
+                height: 180px;
+                width: 180px;
+                padding: 5px;
+            }
+        }
+
+        @media only screen and (max-width: 450px) {
+            .main h1 {
+                text-align: center;
+
+            }
+
+            .main div {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .img {
+                height: 150px;
+                width: 150px;
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>Image Loading Speed Test</h1>
+        <div id="incontainer">
+
+
+        </div>
+
+    </div>
+
+    <script>
+        // These images are non-copyrighted images.
+
+        let data = [{ "Image": "https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=600" }, { "Image": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=600" }, { "Image": "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=600" }, { "Image": "https://images.pexels.com/photos/709552/pexels-photo-709552.jpeg?auto=compress&cs=tinysrgb&w=600" }, { "Image": "https://images.pexels.com/photos/1266810/pexels-photo-1266810.jpeg?auto=compress&cs=tinysrgb&w=600" }, { "Image": "https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&w=600" }, { "Image": "https://images.pexels.com/photos/600114/pexels-photo-600114.jpeg?auto=compress&cs=tinysrgb&w=600" }, { "Image": "https://images.pexels.com/photos/668465/pexels-photo-668465.jpeg?auto=compress&cs=tinysrgb&w=600" }, { "Image": "https://images.pexels.com/photos/132474/pexels-photo-132474.jpeg?auto=compress&cs=tinysrgb&w=600" }, { "Image": "https://images.pexels.com/photos/414102/pexels-photo-414102.jpeg?auto=compress&cs=tinysrgb&w=600" }, { "Image": "https://images.pexels.com/photos/1043458/pexels-photo-1043458.jpeg?auto=compress&cs=tinysrgb&w=600" }, { "Image": "https://images.pexels.com/photos/3617500/pexels-photo-3617500.jpeg?auto=compress&cs=tinysrgb&w=600" }, { "Image": "https://images.pexels.com/photos/96627/pexels-photo-96627.jpeg?auto=compress&cs=tinysrgb&w=600" }, { "Image": "https://images.pexels.com/photos/927414/pexels-photo-927414.jpeg?auto=compress&cs=tinysrgb&w=600" }, { "Image": "https://images.pexels.com/photos/132474/pexels-photo-132474.jpeg?auto=compress&cs=tinysrgb&w=600" }, { "Image": "https://images.pexels.com/photos/2781760/pexels-photo-2781760.jpeg?auto=compress&cs=tinysrgb&w=600" }, { "Image": "https://images.pexels.com/photos/1043458/pexels-photo-1043458.jpeg?auto=compress&cs=tinysrgb&w=600" }, { "Image": "https://images.pexels.com/photos/547115/pexels-photo-547115.jpeg?auto=compress&cs=tinysrgb&w=600" }, { "Image": "https://images.pexels.com/photos/709552/pexels-photo-709552.jpeg?auto=compress&cs=tinysrgb&w=600" }, { "Image": "https://images.pexels.com/photos/1266810/pexels-photo-1266810.jpeg?auto=compress&cs=tinysrgb&w=600" }, { "Image": "https://images.pexels.com/photos/15070819/pexels-photo-15070819/free-photo-of-cliff-on-sea-coast.jpeg?auto=compress&cs=tinysrgb&w=600" }, { "Image": "https://images.pexels.com/photos/50594/sea-bay-waterfront-beach-50594.jpeg?auto=compress&cs=tinysrgb&w=600" }, { "Image": "https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&w=600" }, { "Image": "https://images.pexels.com/photos/15280826/pexels-photo-15280826/free-photo-of-rocks-on-sea-shore.jpeg?auto=compress&cs=tinysrgb&w=600" }]
+
+
+
+        let imageContainer = document.getElementById("incontainer");
+
+        data.forEach(imageUrle => {
+            let imageUrl = imageUrle.Image;
+            let imageElement = document.createElement("div");
+            imageElement.innerHTML = `<img src="${imageUrl}" alt="Image" class="img">`;
+
+            imageContainer.appendChild(imageElement);
+
+        })
+
+    </script>
+
+</body>
+
+</html>
